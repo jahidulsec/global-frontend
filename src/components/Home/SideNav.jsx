@@ -82,7 +82,7 @@ const SideNav = ({setShowMenu}) => {
                                     {   
                                         cat?.sub_side_menu &&
                                         cat.sub_side_menu.map(list => (
-                                            <li key={list.id}>
+                                            <li key={list.id} onClick={() => {setShowMenu(false)}}>
                                                 <Link to={`/menu/${cat.slug}/${cat.query == 'brand' ? 'b' : 'c'}/${list.slug}/1`}>{list.name}</Link>
                                             </li> 
                                         )) 

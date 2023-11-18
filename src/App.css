@@ -2939,7 +2939,7 @@ form p {
 }
 
 .mini-cart.show .cart-body {
-  min-height: 55vh;
+  min-height: 40vh;
   overflow-y: auto;
 }
 
@@ -4430,7 +4430,7 @@ input[type="number"] {
 
   .pagination-number {
     right: initial;
-    /* transform: translateY(6em); */
+    margin-bottom: -6.5em;
     font-size: 0.75em;
   }
 

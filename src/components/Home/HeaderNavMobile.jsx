@@ -279,8 +279,8 @@ const HeaderNavMobile = ({
                                                 <p><strong>{currenyFormat(cartTotal)}</strong></p>
                                             </div>
                                             <div className="actions">
-                                                <Link to="/cart" className="secondary-btn">View Cart</Link>
-                                                <Link to="/checkout" className="primary-btn">Checkout</Link>
+                                                <Link to="/cart" className="secondary-btn" onClick={() => {showCart(false)}} >View Cart</Link>
+                                                <Link to="/checkout" className="primary-btn" onClick={() => {showCart(false)}}>Checkout</Link>
                                             </div>
                                         </div>
 
