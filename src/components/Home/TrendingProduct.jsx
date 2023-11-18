@@ -10,7 +10,7 @@ const TrendingProduct = () => {
 
 
     useEffect(() => {
-        handleOfferedProductGET(`product`,``,``,``,``,``,``,``,`1`)
+        handleOfferedProductGET(`product`,``,``,1,3,``,``,``,`1`)
         handleProductBigGET(`product`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `true`)
     }, [])
 
@@ -39,7 +39,8 @@ const TrendingProduct = () => {
 
                                 {   
                                     offeredProduct &&
-                                    offeredProduct.map(product => (
+                                    offeredProduct.results!= undefined &&
+                                    offeredProduct.results.map(product => (
                                         <TrendingCardMini
                                             key={product.id} 
                                             product={product}

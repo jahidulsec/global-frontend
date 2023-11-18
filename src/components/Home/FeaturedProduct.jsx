@@ -11,7 +11,7 @@ const FeaturedProduct = () => {
 
 
     useEffect(() => {
-        handleFeaturedGET(`product`,``,``,``,``,``,``,``,``,`1`)
+        handleFeaturedGET(`product`,``,``,1,3,``,``,``,``,1)
     },[])
 
   return (
@@ -35,7 +35,8 @@ const FeaturedProduct = () => {
                     <div className="products main">
                         {
                             featuredRes &&
-                            featuredRes.map(product => (
+                            featuredRes.results != undefined &&
+                            featuredRes.results.map(product => (
                                 <FeaturedCard 
                                     key={product.id}
                                     product={product}

@@ -17,7 +17,7 @@ const CatPage = () => {
     const {page} = useParams()
     const navigation = useNavigate()
 
-    const [size, setSize] = useState(9)
+    const [size, setSize] = useState(3)
     const [pageNumber, setPageNumber] = useState(1)
     const [order, setOrder] = useState(``)
     const [minPrice, setMinPrice] = useState(0)
