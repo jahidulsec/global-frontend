@@ -65,8 +65,8 @@ const HeaderNavMobile = ({
                         }
                         <div className="logo">
                             <Link to="/">
-                                <img className='big' src="/global_logo_big.png" alt="global_logo" loading='lazy'/>
-                                <img className='small' src="/global_logo_mini.png" alt="global_logo" loading='lazy'/>
+                                <img className='small' src="/global_logo_big.png" alt="global_logo" loading='lazy'/>
+                                {/* <img className='big' src="/global_logo_mini.png" alt="global_logo" loading='lazy'/> */}
                             </Link>
                         </div>
                         <nav className="mobile-hide">

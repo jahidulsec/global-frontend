@@ -7,11 +7,21 @@ import { useGeneralGet } from '../../hooks/useGeneralGet'
 
 const FeaturedProduct = () => {
 
-   const [featuredRes, handleFeaturedGET] = useGeneralGet() 
+   const [featuredRes1, handleFeaturedGET1] = useGeneralGet() 
+   const [featuredRes2, handleFeaturedGET2] = useGeneralGet() 
+   const [featuredRes3, handleFeaturedGET3] = useGeneralGet() 
+   const [featuredRes4, handleFeaturedGET4] = useGeneralGet() 
+   const [featuredRes5, handleFeaturedGET5] = useGeneralGet() 
+   const [featuredRes6, handleFeaturedGET6] = useGeneralGet() 
 
 
     useEffect(() => {
-        handleFeaturedGET(`product`,``,``,1,3,``,``,``,``,1)
+        handleFeaturedGET1(`product`,``,``,1,1,``,``,``,``,1)
+        handleFeaturedGET2(`product`,``,``,2,1,``,``,``,``,1)
+        handleFeaturedGET3(`product`,``,``,3,1,``,``,``,``,1)
+        handleFeaturedGET4(`product`,``,``,4,1,``,``,``,``,1)
+        handleFeaturedGET5(`product`,``,``,5,1,``,``,``,``,1)
+        handleFeaturedGET6(`product`,``,``,6,1,``,``,``,``,1)
     },[])
 
   return (
@@ -34,9 +44,59 @@ const FeaturedProduct = () => {
                     {/* main product card */}
                     <div className="products main">
                         {
-                            featuredRes &&
-                            featuredRes.results != undefined &&
-                            featuredRes.results.map(product => (
+                            featuredRes1 &&
+                            featuredRes1.results != undefined &&
+                            featuredRes1.results.map(product => (
+                                <FeaturedCard 
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                        }
+                        {
+                            featuredRes2 &&
+                            featuredRes2.results != undefined &&
+                            featuredRes2.results.map(product => (
+                                <FeaturedCard 
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                        }
+                        {
+                            featuredRes3 &&
+                            featuredRes3.results != undefined &&
+                            featuredRes3.results.map(product => (
+                                <FeaturedCard 
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                        }
+                        {
+                            featuredRes4 &&
+                            featuredRes4.results != undefined &&
+                            featuredRes4.results.map(product => (
+                                <FeaturedCard 
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                        }
+                        {
+                            featuredRes5 &&
+                            featuredRes5.results != undefined &&
+                            featuredRes5.results.map(product => (
+                                <FeaturedCard 
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))
+                        }
+                        {
+                            featuredRes6 &&
+                            featuredRes6.results != undefined &&
+                            featuredRes6.results.map(product => (
                                 <FeaturedCard 
                                     key={product.id}
                                     product={product}

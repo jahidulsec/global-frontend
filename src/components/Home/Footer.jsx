@@ -42,7 +42,7 @@ const Footer = ({
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        query && navigate(`/category?search=${query}&page=1&size=1`)
+        query && navigate(`/search/${query.replace(` `,`+`)}/1`)
         setShowSearch(false)
     }
 

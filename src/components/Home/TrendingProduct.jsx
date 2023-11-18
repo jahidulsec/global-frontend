@@ -5,12 +5,22 @@ import { useGeneralGet } from '../../hooks/useGeneralGet'
 
 const TrendingProduct = () => {
 
-    const [offeredProduct, handleOfferedProductGET] = useGeneralGet()
+    const [offeredProduct1, handleOfferedProductGET1] = useGeneralGet()
+    const [offeredProduct2, handleOfferedProductGET2] = useGeneralGet()
+    const [offeredProduct3, handleOfferedProductGET3] = useGeneralGet()
+    const [offeredProduct4, handleOfferedProductGET4] = useGeneralGet()
+    const [offeredProduct5, handleOfferedProductGET5] = useGeneralGet()
+    const [offeredProduct6, handleOfferedProductGET6] = useGeneralGet()
     const [productBig, handleProductBigGET] = useGeneralGet()
 
 
     useEffect(() => {
-        handleOfferedProductGET(`product`,``,``,1,3,``,``,``,`1`)
+        handleOfferedProductGET1(`product`,``,``,1,1,``,``,``,`1`)
+        handleOfferedProductGET2(`product`,``,``,2,1,``,``,``,`1`)
+        handleOfferedProductGET3(`product`,``,``,3,1,``,``,``,`1`)
+        handleOfferedProductGET4(`product`,``,``,4,1,``,``,``,`1`)
+        handleOfferedProductGET5(`product`,``,``,5,1,``,``,``,`1`)
+        handleOfferedProductGET6(`product`,``,``,6,1,``,``,``,`1`)
         handleProductBigGET(`product`, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, `true`)
     }, [])
 
@@ -38,9 +48,63 @@ const TrendingProduct = () => {
                             <div className='products-mini-content'>
 
                                 {   
-                                    offeredProduct &&
-                                    offeredProduct.results!= undefined &&
-                                    offeredProduct.results.map(product => (
+                                    offeredProduct1 &&
+                                    offeredProduct1.results!= undefined &&
+                                    offeredProduct1.results.map(product => (
+                                        <TrendingCardMini
+                                            key={product.id} 
+                                            product={product}
+                                        />
+                                    ))
+                                }
+
+                                {   
+                                    offeredProduct2 &&
+                                    offeredProduct2.results!= undefined &&
+                                    offeredProduct2.results.map(product => (
+                                        <TrendingCardMini
+                                            key={product.id} 
+                                            product={product}
+                                        />
+                                    ))
+                                }
+
+                                {   
+                                    offeredProduct3 &&
+                                    offeredProduct3.results!= undefined &&
+                                    offeredProduct3.results.map(product => (
+                                        <TrendingCardMini
+                                            key={product.id} 
+                                            product={product}
+                                        />
+                                    ))
+                                }
+
+                                {   
+                                    offeredProduct4 &&
+                                    offeredProduct4.results!= undefined &&
+                                    offeredProduct4.results.map(product => (
+                                        <TrendingCardMini
+                                            key={product.id} 
+                                            product={product}
+                                        />
+                                    ))
+                                }
+
+                                {   
+                                    offeredProduct5 &&
+                                    offeredProduct5.results!= undefined &&
+                                    offeredProduct5.results.map(product => (
+                                        <TrendingCardMini
+                                            key={product.id} 
+                                            product={product}
+                                        />
+                                    ))
+                                }
+                                {   
+                                    offeredProduct6 &&
+                                    offeredProduct6.results!= undefined &&
+                                    offeredProduct6.results.map(product => (
                                         <TrendingCardMini
                                             key={product.id} 
                                             product={product}

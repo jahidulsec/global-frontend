@@ -10,7 +10,7 @@
   --secondary-dark-clr: #453c5c;
 
   --white-clr: #fff;
-  --light-bg-clr: #f2faef;
+  --light-bg-clr: #f4f4f4;
   --light-txt-clr: #7c899a;
   --border-clr: #e5e8ec;
   --dark-clr: #0a021c;
@@ -607,7 +607,7 @@ button.primary-btn:disabled  {
   font-size: 1.5em;
   display: flex;
   padding: 0.25em;
-  margin-right: 0.5em;
+  /* margin-right: 0.5em; */
 }
 
 .logo {
@@ -3269,7 +3269,11 @@ td[data-label='Quantity'] .qty-control{
   cursor:not-allowed;
 }
 
-:where(.checkout, .signup) .item.right {
+.checkout .item.right {
+  padding: 2em;
+}
+
+ .signup .item.right {
   padding: 5em 0 0;
 }
 
@@ -4320,6 +4324,10 @@ input[type="number"] {
 
 
 @media screen and (max-width: 639px) {
+
+  .widgets {
+    padding: 2em;
+  }
 
 
   .widgets .flexwrap {
