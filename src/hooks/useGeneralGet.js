@@ -3,13 +3,14 @@ import { useState } from "react"
 export const useGeneralGet = () => {
 
     const [response, setResponse] = useState()
+    const [loading, setLoading] = useState(false)
 
     
 
     const handleGet = async(name, id, order, page, size, category_slug, token, status, offered, featured, product_slug, side_menu_slug, category_id, auth, brand_slug, display_big, min_price, max_price) => {
         
         try {
-
+            setLoading(true)
             const headerOpt = new Headers();
             headerOpt.append('Content-Type', "application/json")
             if (token) {
@@ -48,8 +49,10 @@ export const useGeneralGet = () => {
             
         } catch (error) {
             console.log(error)
+        } finally {
+            setLoading(false)
         }
     }
 
-    return [response, handleGet]
+    return [response, handleGet, loading]
 }

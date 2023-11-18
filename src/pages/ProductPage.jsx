@@ -10,7 +10,7 @@ import { useGeneralGet } from '../hooks/useGeneralGet'
 const ProductPage = () => {
 
   const {id} = useParams()
-  const [product, handleProductGET] = useGeneralGet()
+  const [product, handleProductGET,loading] = useGeneralGet()
 
   
 
@@ -57,6 +57,9 @@ const ProductPage = () => {
                   productCat={product.category}  
                 />
             </div>
+          }
+          {
+            loading && <span className='loading'>Loading</span>
           }
         </div>
     </section>

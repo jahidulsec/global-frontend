@@ -22,7 +22,7 @@ const RelatedProduct = ({ productCat }) => {
                     <div className="sectop flexitem">
                         <h2>Related Products</h2>
                         <div className="main-link view-all">
-                            <Link to={`/category?category=${productCat.slug}&page=1`} className="flexitem">
+                            <Link to={`/category/${productCat.slug}/1`} className="flexitem">
                                 <span>View all</span>
                                 <span className="ri-arrow-right-line"></span>
                             </Link>

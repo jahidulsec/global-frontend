@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useGeneralGet } from '../../hooks/useGeneralGet'
 
 const DptMenuHome = () => {
-    const [sideCat, handleSideCatGET] = useGeneralGet()
+    const [sideCat, handleSideCatGET, loading] = useGeneralGet()
 
 
     useEffect(() => {
@@ -16,6 +16,7 @@ const DptMenuHome = () => {
         <div className="dpt-menu-home mobile-hide">
             <ul className="second-link">
                 {
+                !loading &&
                 sideCat &&
                 sideCat != undefined &&
                 sideCat.map((cat) => (
@@ -29,6 +30,10 @@ const DptMenuHome = () => {
                         </Link>
                     </li>
                 ))}
+                {
+                    loading && <span className='loading'></span>
+
+                }
             </ul>
         </div>
     </div>

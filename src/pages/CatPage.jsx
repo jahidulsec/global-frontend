@@ -23,7 +23,7 @@ const CatPage = () => {
     const [minPrice, setMinPrice] = useState(0)
     const [maxPrice, setMaxPrice] = useState(0)
 
-    const [searchProduct, handleSearchProductGET] = useSearchQuery()
+    const [searchProduct, handleSearchProductGET, loading] = useSearchQuery()
     const [minProduct, handleMinProductGET] = useSearchQuery()
     const [maxProduct, handleMaxProductGET] = useSearchQuery()
 
@@ -92,16 +92,7 @@ const CatPage = () => {
                                             minProduct.results.length !=0 && maxProduct.results.length !=0 && 
                                             <div className="price-slider">
                                                 <p>{minProduct.results.price}</p>
-                                                {/* <MultiRangeSlider
-                                                    min={parseInt(minProduct.results[0].price)}
-                                                    max={parseInt(maxProduct.results[0].price)}
-                                                    // onChange={({min, max}) => console.log(min, max)}
-                                                    onChange={({ min, max }) => {
-                                                        setMinPrice(min)
-                                                        setMaxPrice(max)
-                                                        }
-                                                    }
-                                                /> */}
+                                                
                                                 <DoubleRangeInput 
                                                     min_value={parseInt(minProduct.results[0].price)}
                                                     max_value={parseInt(maxProduct.results[0].price)}
@@ -112,6 +103,7 @@ const CatPage = () => {
                                                 />
                                             </div>
                                         }
+                                        
                                     </div>
 
                                     {
@@ -204,6 +196,7 @@ const CatPage = () => {
                                 {/* featured products */}
                                 <div className="products main flexwrap">
                                     {
+                                        !loading &&
                                         searchProduct &&
                                         searchProduct != undefined &&
                                         searchProduct.results != undefined &&
@@ -214,14 +207,22 @@ const CatPage = () => {
                                             />
                                         ))
                                     } 
+                                    {
+                                        loading && <span className='loading'>Loading</span>
+                                    }
                                 </div>
 
-                                {
+                                {   
+                                    !loading &&
                                     searchProduct && 
                                     (searchProduct.results == undefined ||
                                     searchProduct.results.length == 0) &&
                                     <NoItem />
                                 }
+
+                                
+
+
 
 
                                 <PaginationProduct 
