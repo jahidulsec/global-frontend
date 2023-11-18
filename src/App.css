@@ -1725,7 +1725,7 @@ form.search button:hover{
 
 .widgets .item h4{
   padding-bottom: 0.5em;
-  border-bottom: 2px solid var(--secondary-clr);
+  border-bottom: 2px solid var(--border-clr);
 }
 
 .widgets .item h4:first-child {
@@ -4430,8 +4430,8 @@ input[type="number"] {
 
   .pagination-number {
     right: initial;
-    transform: translateY(6em);
-    font-size: 0.5em;
+    /* transform: translateY(6em); */
+    font-size: 0.75em;
   }
 
   .profile-page .content-user {
